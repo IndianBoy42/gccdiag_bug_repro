@@ -62,6 +62,18 @@ What I get is:
 
 I think it's the extra quotes and backslashes
 
+The following `target_compile_definitions` in the CMakeLists.txt will replicate the compiler error when run:
+
+```
+target_compile_definitions(
+  Tutorial PUBLIC
+  -D__forceinline="__attribute__\(\(always_inline\)\)"
+  -Dheader=tutorial.h
+)
+```
+
+Note the added quotes in `__force_inline` and the missing quotes in `stdio`
+
 Compiler and CMake versions:
 
 ```fish

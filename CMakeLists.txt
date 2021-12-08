@@ -13,6 +13,11 @@ target_compile_definitions(
   -D__forceinline=__attribute__\(\(always_inline\)\)
   -Dstdio="tutorial.h"
 )
+# target_compile_definitions(
+#   Tutorial PUBLIC
+#   -D__forceinline="__attribute__\(\(always_inline\)\)"
+#   -Dstdio=tutorial.h
+# )
 
 add_custom_command(
   TARGET Tutorial POST_BUILD
