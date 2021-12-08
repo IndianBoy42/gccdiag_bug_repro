@@ -57,8 +57,10 @@ gccdiag -c ./fakecc tutorial.cpp
 What I get is:
 
 ```sh
-gcc -D__forceinline="__attribute__((always_inline))" -Dstdio=\"tutorial.h\" -I/home/amedhi/dev/gccdiag_fail/. -o /dev/null -c /home/amedhi/dev/gccdiag_fail/tutorial.cpp
+-D__forceinline="__attribute__((always_inline))" -Dstdio=\"tutorial.h\" -I/home/amedhi/dev/gccdiag_fail/. -o /dev/null -c /home/amedhi/dev/gccdiag_fail/tutorial.cpp
 ```
+
+I think it's the extra quotes and backslashes
 
 Compiler and CMake versions:
 
